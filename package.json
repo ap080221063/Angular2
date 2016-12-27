@@ -1,0 +1,15 @@
+{
+  "name": "Angular2",
+  "version": "1.0.0",
+  "description": "messing around with angular2",
+  "main": "systemjs.config.js",
+  "scripts": {
+    "lite": "lite-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "lite-server": "^2.2.2"
+  }
+}
