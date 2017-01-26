@@ -15,12 +15,16 @@ var AppComponent = (function () {
             { id: 3, name: 'Hugo', username: 'hg080244455' }
         ];
     }
+    AppComponent.prototype.selectUser = function (user) {
+        this.activeUser = user;
+        console.log(this.activeUser);
+    };
     return AppComponent;
 }());
 AppComponent = __decorate([
     core_1.Component({
         selector: "my-app",
-        template: "\n<header>\n    <nav class=\"navbar navbar-inverse\">\n        <div class=\"navbar-header\">\n            <a href=\"/\" class=\"navbar-brand\">My Angular 2 App!</a>\n        </div>\n    </nav>\n<header>\n\n<main>\n    <div class=\"jumbotron\">\n        <h1>Welcome to our APP!</h1>\n        <p>{{ message }}</p>\n    </div>\n\n    <!--<p>The user is {{ user.name }} ({{user.username}}).</p>-->\n\n    <div *ngIf=\"users\">\n        <div  *ngFor=\"let user of users\">\n            {{ user.name }} - ({{user.username}})\n        </div>\n    </div>\n\n</main>\n\n<footer class=\"text-center\">\n    Copyright &copy; 2017\n</footer>\n    ",
+        template: "\n<header>\n    <nav class=\"navbar navbar-inverse\">\n        <div class=\"navbar-header\">\n            <a href=\"/\" class=\"navbar-brand\">My Angular 2 App!</a>\n        </div>\n    </nav>\n<header>\n\n<main>\n\n    <div class=\"row\">\n        <div class=\"col-sm-4\">\n           <div *ngIf=\"users\">\n               <ul class=\"list-group users-list\">\n                   <li class=\"list-group-item\" *ngFor=\"let user of users\"\n                    (click)=\"selectUser(user)\"\n                    >\n                       {{ user.name }} - ({{user.username}})\n                   </li>\n               </ul>\n           </div>\n        </div>\n        <div class=\"col-sm-8\">\n            <div class=\"jumbotron\">\n                <h1>Welcome to our APP!</h1>\n                <p>{{ message }}</p>\n            </div>\n        </div>\n    </div>\n\n    <!--<p>The user is {{ user.name }} ({{user.username}}).</p>-->\n\n</main>\n\n<footer class=\"text-center\">\n    Copyright &copy; 2017\n</footer>\n    ",
         styles: ["\n      .jumbotron {box-shadow: 0 2px 0 rgba(0,0,0,0.2)}\n    "]
     })
 ], AppComponent);
