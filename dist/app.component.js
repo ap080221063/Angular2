@@ -6,6 +6,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var core_1 = require("@angular/core");
+var User = (function () {
+    function User() {
+    }
+    return User;
+}());
+exports.User = User;
 var AppComponent = (function () {
     function AppComponent() {
         this.message = 'Hello!';
