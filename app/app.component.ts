@@ -1,12 +1,5 @@
 import { Component } from '@angular/core';
-
-export class User{
-
-    id: number;
-    name: string;
-    username: string;
-
-}
+import { User } from './shared/models/user';
 
 @Component({
     selector:"my-app",
