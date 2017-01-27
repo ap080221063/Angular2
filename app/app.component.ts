@@ -34,7 +34,7 @@ import { User } from './shared/models/user';
                     <h2>{{ activeUser.name }} <small> {{activeUser.username}}</small></h2>
             </div>
 
-            <div class="jumbotron" *ngIf="!activeUser">
+            <div class="jumbotron gocrazy" *ngIf="!activeUser">
                 <span class="glyphicon glyphicon-hand-left"></span>
                 <h2>Choose a User</h2>
             </div>
@@ -53,6 +53,8 @@ import { User } from './shared/models/user';
       .jumbotron {box-shadow: 0 2px 0 rgba(0,0,0,0.2)}
       .users-list li { cursor: pointer; }
       .jumbotron .glyphicon { font-size:80px;}
+      .gocrazy { background: MistyRose; color:Black;}
+
     `]
 
 })
